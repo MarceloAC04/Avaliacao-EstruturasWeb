@@ -1,0 +1,30 @@
+@font-face {
+    font-family: lato;
+    src: url(../style/font/Lato-Regular.ttf);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 29px 72px;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+}
+
+nav a{
+    text-decoration: none;
+}
+
