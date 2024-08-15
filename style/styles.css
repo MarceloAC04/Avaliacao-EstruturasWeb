@@ -11,20 +11,70 @@
 
 
 header{
-    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     padding: 29px 72px;
     align-items: center;
+    
+    background-color: blue;
 }
 
 nav{
     display: flex;
-    width: 20%;
+    width: 32%;
     justify-content: space-between;
+    align-items: center;
 }
 
 nav a{
     text-decoration: none;
+    color: white;
+    font-family: lato;
 }
+
+nav .cadastro {
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px 15px;
+    width: 45%;
+    text-align: center;
+}
+
+
+main .home {
+    display: flex;
+    background-color: blue;
+    padding: 0px 72px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .home .texto {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 80%;
+    padding-bottom: 10%;
+}
+
+main .home .texto h2 {
+    color: white;
+    font-family: lato;
+    font-style: Bold;
+}
+
+main .home .texto p {
+    color: white;
+    font-family: lato;
+}
+
+
+
+footer {
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    padding: 18px;
+}
+
 
