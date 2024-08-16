@@ -12,12 +12,26 @@
   <header>
     <img src="./style/img/logo-branca.png" alt="" />
 
-    <nav>
-      <a href="">Hoteis</a>
-      <a href="">Contato</a>
-      <a href="">Entrar</a>
-      <a href="" class="cadastro">Cadastrar-se</a>
-    </nav>
+    <div class="header-top">
+      <nav>
+        <a href="">Hoteis</a>
+        <a href="">Contato</a>
+        <a href="">Entrar</a>
+        <a href="" class="cadastro">Cadastrar-se</a>
+      </nav>
+    </div>
+
+    <div class="header-bottom">
+      <img onclick="mostrarMenu()" class="menu-hamburger"
+                    src="./style/img/icons8-hamburger-button-50.png"
+                    alt="ícone para abrir e fechar o menu mobile">
+      <nav id="menu">
+        <a href="">Hoteis</a>
+        <a href="">Contato</a>
+        <a href="">Entrar</a>
+        <a href="" class="cadastro">Cadastrar-se</a>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -45,12 +59,12 @@
 
       <div class="campo">
         <img src="./style/img/icons/checkin-icon.svg" alt="">
-        <p>Data chek in</p>
+        <p>Data check-in</p>
       </div>
 
       <div class="campo">
         <img src="./style/img/icons/checkout-icon.svg" alt="">
-        <p>Data chek out</p>
+        <p>Data check-out</p>
       </div>
 
       <div class="campo-buscar">
@@ -186,6 +200,12 @@
   <footer>
     <img src="./style/img/logo-preta.png" alt="" />
   </footer>
+
+  <script>
+    function mostrarMenu() {
+        document.getElementById("menu").classList.toggle("mostrar-menu");
+    }
+</script>
 </body>
 
 </html>

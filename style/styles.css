@@ -1,7 +1,7 @@
 @font-face {
     font-family: lato;
     src: url(../style/font/Lato-Regular.ttf);
-  }
+}
 
 * {
     margin: 0;
@@ -10,35 +10,47 @@
 }
 
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     padding: 29px 72px;
     align-items: center;
-    
     background: linear-gradient(to right top, rgba(30, 82, 180, 1), rgba(0, 39, 119, 1));
 }
 
-nav{
+header .header-bottom {
+    display: none;
+}
+
+header .header-top {
+    width: 30%;
+}
+
+header .header-top nav {
     display: flex;
-    width: 32%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
 }
 
-nav a{
+header .header-top nav a {
     text-decoration: none;
     color: white;
     font-size: 14px;
     font-family: lato;
 }
 
-nav .cadastro {
+header .header-top nav .cadastro {
     border: 2px solid white;
     border-radius: 8px;
     padding: 10px 15px;
     width: 45%;
     text-align: center;
+}
+
+header .header-top nav .cadastro:hover {
+    background-color: #FFFFFF;
+    color: rgba(0, 39, 119, 1);
 }
 
 main {
@@ -92,7 +104,7 @@ main .filtro {
     height: 80px;
     border-radius: 8px;
     top: 320px;
-    left: 20%;
+    left: 15%;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -115,7 +127,7 @@ main .filtro .campo-buscar {
     text-align: center;
 }
 
-main .filtro .campo-buscar p{
+main .filtro .campo-buscar p {
     color: #FFFFFF;
 }
 
@@ -137,11 +149,11 @@ main .hoteis .cards .card-hotel {
     font-family: lato;
 }
 
-main .hoteis .cards .card-hotel img{
-  border-radius: 8px;
-  width: 260px;
-  height: 173px;
-  margin-bottom: 10px;
+main .hoteis .cards .card-hotel img {
+    border-radius: 8px;
+    width: 260px;
+    height: 173px;
+    margin-bottom: 10px;
 }
 
 
@@ -156,7 +168,7 @@ main .hoteis .cards .card-hotel .local-hotel .estado {
     color: #FFDF00;
 }
 
-main .hoteis .cards .card-hotel p{
+main .hoteis .cards .card-hotel p {
     text-align: justify;
     font-size: 12px;
 }
@@ -191,7 +203,7 @@ main .sobre .texto-sobre .verde {
 
 main .sobre p {
     font-size: 20px;
- text-align: justify;
+    text-align: justify;
 }
 
 main .sobre p .amarelo {
@@ -229,97 +241,184 @@ footer {
 }
 
 
-@media screen and (max-width: 820px){
-    header{
-       width: 480px;
-       gap: 50px; 
+@media screen and (max-width: 820px) {
+    header {
+        width: 430px;
+        padding: 29px 22px;
     }
 
-    header img {
-        width: 130px;
+    header .header-top {
+        display: none;
     }
 
-    nav{
+    header .header-bottom {
+        display: block;
+        height: 100%;
+    }
+
+    header .header-bottom img {
+        height: 20%;
+        margin-right: 50px;
+    }
+
+    header .header-bottom nav {
+        position: fixed;
+        z-index: 1000;
+        top: 20px;
+        left: -80vw;
+        width: 80vw;
+        height: calc(100vh - 90px);
+    
         display: flex;
-        gap: 20px;
-        width: auto;
-        justify-content: space-around;
+        flex-direction: column;
+        background-image: linear-gradient(to right bottom, rgba(30, 82, 180, 1), rgba(0, 39, 119, 1));
+        backdrop-filter: blur(10px);
+        border: 1px solid white;
+        justify-content: space-evenly;
         align-items: center;
-    }
     
-    nav a{
+        opacity: 0;
+        transition: left 0.4s, opacity 0.6s;
+    
+    }
+
+    header .header-bottom nav a {
         text-decoration: none;
-        color: white;
-        font-size: 10px;
         font-family: lato;
+        color: white;
+    }
+
+    header .header-bottom nav>a {
+        border-bottom: 2px solid #FFFFFF;
+        padding-bottom: 45px;
+        width: 300px;
+        text-align: center;
+    
     }
     
-    nav .cadastro {
+    header .header-bottom nav>a:last-of-type {
         border: none;
-        border-radius: 0px;
-        padding: 0px;
-        width: 100%;
-        text-align: none;
+    }
+    
+    header .header-bottom nav a:hover {
+        opacity: 0.7;
+    }
+    
+    header .header-bottom .mostrar-menu {
+        opacity: 1;
+        left: 0;
     }
 
     main .home {
-        width: 480px;
+        width: 430px;
         flex-direction: column;
         justify-content: center;
         align-items: space-between;
-        padding: 0px 72px;
+        padding: 0px 24px;
     }
-    
+
     main .home .texto h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     main .home .texto p {
-        font-size: 16px;
+        font-size: 14px;
     }
-    
+
     main .home .mapa {
-        padding-right: 8px;
+        padding-right: 0px;
     }
-    
+
     main .filtro {
-        width: 400px;
-        padding-left: 20px;
-        padding-right: 21px;
-        height: 120px;
+        width: 300px;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 100px;
         flex-wrap: wrap;
         border-radius: 8px;
-        top: 460px;
+        top: 458px;
         left: 15%;
-        box-shadow: (4, 4, 10, 5);
     }
-    
+
     main .filtro .campo {
-        display: flex;
-        gap: 8px;
+        text-align: -webkit-left;
+        gap: 25px;
         padding-right: 5;
-        width: 100px;
+        width: 130px;
         border-right: 1px solid #4E4B59;
     }
-    
+
     main .filtro p {
         font-family: lato;
         font-size: 10px;
     }
-    
+
     main .filtro .campo-buscar {
         background-color: #009C3B;
+        padding: 10px 25px;
         border-radius: 8px;
-        margin-left: 30%;
+        margin-left: 0%;
         text-align: center;
     }
-    
+
     main .hoteis {
         width: 480px;
         align-items: center;
     }
-    
-    
+
+    main .hoteis {
+        margin-top: 62px;
+    }
+
+    main .hoteis .cards .card-hotel {
+        margin-right: 68px;
+    }
+
+    main .sobre {
+        flex-direction: column;
+        align-items: center;
+        width: 410px;
+    }
+
+    main .sobre .texto-sobre {
+        width: 244px;
+        align-items: center;
+        gap: 21px;
+    }
+
+    main .sobre .texto-sobre h2 {
+        text-align: start;
+        font-size: 24px;
+    }
+
+    main .sobre p {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    main .sobre .mala img {
+        margin-top: 20px;
+        height: 200px;
+    }
+
+    main .contato {
+        height: 163px;
+        width: 410px;
+    }
+
+    main .contato .contato-info h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    main .contato .contato-info p {
+        font-size: 14px;
+        margin-right: 22px;
+    }
+
+    footer {
+        width: 398px;
+        display: flex;
+        justify-content: center;
+    }
 }
-
-
