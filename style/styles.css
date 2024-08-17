@@ -96,7 +96,7 @@ main .filtro {
     position: absolute;
     background-color: #FFFFFF;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 942px;
     padding-left: 30px;
@@ -110,25 +110,26 @@ main .filtro {
 
 main .filtro .campo {
     display: flex;
-    gap: 8px;
-    padding-right: 30;
-    width: 177px;
-    border-right: 1px solid #4E4B59;
+    gap: 4px;
+    justify-content: center;
+    border-right: 2px dotted #4E4B59;
 }
 
-main .filtro p {
-    font-family: lato;
+main .filtro .campo input {
+    border: none;
+    padding: 15px;
 }
+
 
 main .filtro .campo-buscar {
     background-color: #009C3B;
     border-radius: 8px;
+    color: #FFFFFF;
+    font-family: lato;
+    cursor: pointer;
+    border: transparent;
     padding: 14px 29px;
     text-align: center;
-}
-
-main .filtro .campo-buscar p {
-    color: #FFFFFF;
 }
 
 main .hoteis {
@@ -175,8 +176,8 @@ main .hoteis .cards .card-hotel p {
 
 main .sobre {
     display: flex;
-    justify-content: space-between;
-    padding: 0px 72px;
+    justify-content: space-around;
+    gap: 5%;
 }
 
 main .sobre .texto-sobre {
@@ -258,7 +259,7 @@ footer {
 
     header .header-bottom img {
         height: 20%;
-        margin-right: 50px;
+        margin-right: 28px;
     }
 
     header .header-bottom nav {
@@ -333,45 +334,34 @@ footer {
         width: 300px;
         padding-left: 15px;
         padding-right: 15px;
-        height: 100px;
+        height: 225px;
         flex-wrap: wrap;
         border-radius: 8px;
-        top: 458px;
+        top: 434px;
         left: 15%;
     }
 
     main .filtro .campo {
         text-align: -webkit-left;
-        gap: 25px;
-        padding-right: 5;
-        width: 130px;
-        border-right: 1px solid #4E4B59;
-    }
-
-    main .filtro p {
-        font-family: lato;
-        font-size: 10px;
+        gap: 0px; 
+        border-right: transparent;
+        padding-right: 0px; 
+        border-bottom: 1px dotted #4E4B59;
     }
 
     main .filtro .campo-buscar {
-        background-color: #009C3B;
-        padding: 10px 25px;
-        border-radius: 8px;
-        margin-left: 0%;
-        text-align: center;
+        padding: 12px 22px;
     }
+
 
     main .hoteis {
         width: 480px;
         align-items: center;
-    }
-
-    main .hoteis {
-        margin-top: 62px;
+        margin-top: 45%;
     }
 
     main .hoteis .cards .card-hotel {
-        margin-right: 68px;
+        margin-right: 60px;
     }
 
     main .sobre {
@@ -403,7 +393,7 @@ footer {
 
     main .contato {
         height: 163px;
-        width: 410px;
+        width: 430px;
     }
 
     main .contato .contato-info h3 {
@@ -417,7 +407,7 @@ footer {
     }
 
     footer {
-        width: 398px;
+        width: 430px;
         display: flex;
         justify-content: center;
     }
