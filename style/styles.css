@@ -291,8 +291,8 @@ footer {
         position: fixed;
         z-index: 1000;
         top: 20px;
-        left: -80vw;
-        width: 80vw;
+        left: -71vw;
+        width: 71vw;
         height: calc(100vh - 200px);
     
         display: flex;
