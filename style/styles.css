@@ -9,6 +9,12 @@
     box-sizing: border-box;
 }
 
+.layout-grid {
+    width: 100%;
+    max-width: 1590px;
+    margin: 0 auto;
+}
+
 
 header {
     display: flex;
@@ -16,6 +22,7 @@ header {
     padding: 29px 72px;
     align-items: center;
     background: linear-gradient(to right top, rgba(30, 82, 180, 1), rgba(0, 39, 119, 1));
+    width: 1200px;
 }
 
 header .header-bottom {
@@ -40,6 +47,10 @@ header .header-top nav a {
     font-family: lato;
 }
 
+header .header-top nav a:hover {
+    opacity: 0.8;
+}
+
 header .header-top nav .cadastro {
     border: 2px solid white;
     border-radius: 8px;
@@ -51,7 +62,10 @@ header .header-top nav .cadastro {
 header .header-top nav .cadastro:hover {
     background-color: #FFFFFF;
     color: rgba(0, 39, 119, 1);
+    font-weight: 600;
+    opacity: 1;
 }
+
 
 main {
     position: relative;
@@ -96,7 +110,7 @@ main .filtro {
     position: absolute;
     background-color: #FFFFFF;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 942px;
     padding-left: 30px;
@@ -104,7 +118,7 @@ main .filtro {
     height: 80px;
     border-radius: 8px;
     top: 320px;
-    left: 15%;
+    left: 18%;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -117,6 +131,8 @@ main .filtro .campo {
 
 main .filtro .campo input {
     border: none;
+    font-family: lato;
+    font-size: 16px;
     padding: 15px;
 }
 
@@ -126,11 +142,18 @@ main .filtro .campo-buscar {
     border-radius: 8px;
     color: #FFFFFF;
     font-family: lato;
+    font-size: 15px;
     cursor: pointer;
     border: transparent;
     padding: 14px 29px;
     text-align: center;
 }
+
+main .filtro .campo-buscar:hover {
+    opacity: 0.8;
+}
+
+
 
 main .hoteis {
     margin-top: 41px;
@@ -171,6 +194,7 @@ main .hoteis .cards .card-hotel .local-hotel .estado {
 
 main .hoteis .cards .card-hotel p {
     text-align: justify;
+    font-family: lato;
     font-size: 12px;
 }
 
@@ -190,7 +214,8 @@ main .sobre .texto-sobre {
 }
 
 main .sobre .texto-sobre h2 {
-    text-align: justify;
+    text-align: left;
+    font-weight: 800;
     font-size: 28px;
 }
 
@@ -242,6 +267,7 @@ footer {
 }
 
 
+
 @media screen and (max-width: 820px) {
     header {
         width: 430px;
@@ -259,7 +285,6 @@ footer {
 
     header .header-bottom img {
         height: 20%;
-        margin-right: 28px;
     }
 
     header .header-bottom nav {
@@ -268,12 +293,11 @@ footer {
         top: 20px;
         left: -80vw;
         width: 80vw;
-        height: calc(100vh - 90px);
+        height: calc(100vh - 200px);
     
         display: flex;
         flex-direction: column;
         background-image: linear-gradient(to right bottom, rgba(30, 82, 180, 1), rgba(0, 39, 119, 1));
-        backdrop-filter: blur(10px);
         border: 1px solid white;
         justify-content: space-evenly;
         align-items: center;
@@ -299,6 +323,7 @@ footer {
     
     header .header-bottom nav>a:last-of-type {
         border: none;
+        padding: inherit;
     }
     
     header .header-bottom nav a:hover {
@@ -332,10 +357,12 @@ footer {
 
     main .filtro {
         width: 300px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 0;
+        padding-right: 0;
+        flex-direction: column;
+        gap: 9px;
+        justify-content: center;
         height: 225px;
-        flex-wrap: wrap;
         border-radius: 8px;
         top: 434px;
         left: 15%;
@@ -349,15 +376,21 @@ footer {
         border-bottom: 1px dotted #4E4B59;
     }
 
+    main .filtro .campo input {
+        font-size: 14px;
+    }
+
     main .filtro .campo-buscar {
-        padding: 12px 22px;
+        padding: 11px 22px;
+        font-size: 14px;
+        width: 66%;
     }
 
 
     main .hoteis {
         width: 480px;
         align-items: center;
-        margin-top: 45%;
+        margin-top: 48%;
     }
 
     main .hoteis .cards .card-hotel {
